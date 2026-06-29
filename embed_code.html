@@ -1,0 +1,99 @@
+<!-- CodeAlpha Chatbot Integration Snippet -->
+<!-- Copy and paste this snippet right before the closing </body> tag of your target website -->
+
+<script>
+  (function() {
+    // 1. Create Floating Toggle Button
+    const btn = document.createElement('button');
+    btn.id = 'alphabot-launcher';
+    btn.innerHTML = '✦';
+    btn.title = 'Chat with AlphaBot';
+    btn.style.cssText = `
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: #2c2825;
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 8px 24px rgba(44, 40, 37, 0.25);
+      cursor: pointer;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999999;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      outline: none;
+    `;
+    
+    // Hover effects for the launcher button
+    btn.addEventListener('mouseenter', () => {
+      btn.style.transform = 'scale(1.08)';
+      btn.style.background = '#6b5e4e';
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'scale(1)';
+      btn.style.background = '#2c2825';
+    });
+
+    // 2. Create Floating Iframe Wrapper Container
+    const container = document.createElement('div');
+    container.id = 'alphabot-container';
+    container.style.cssText = `
+      position: fixed;
+      bottom: 96px;
+      right: 24px;
+      width: 440px;
+      height: 620px;
+      border-radius: 24px;
+      box-shadow: 0 16px 48px rgba(44, 40, 37, 0.18);
+      z-index: 999999;
+      overflow: hidden;
+      display: none;
+      opacity: 0;
+      transform: translateY(24px) scale(0.95);
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid #e8e4dc;
+      background: #ffffff;
+    `;
+    
+    // Create the iframe inside the wrapper pointing to the Flask chatbot server
+    const iframe = document.createElement('iframe');
+    iframe.src = 'http://localhost:5002/';
+    iframe.style.cssText = `
+      width: 100%;
+      height: 100%;
+      border: none;
+    `;
+    container.appendChild(iframe);
+    
+    document.body.appendChild(btn);
+    document.body.appendChild(container);
+    
+    // 3. Toggle Show/Hide Chat Window Logic
+    let isOpen = false;
+    btn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        container.style.display = 'block';
+        setTimeout(() => {
+          container.style.opacity = '1';
+          container.style.transform = 'translateY(0) scale(1)';
+        }, 10);
+        btn.innerHTML = '✕';
+        btn.style.fontSize = '1.2rem';
+      } else {
+        container.style.opacity = '0';
+        container.style.transform = 'translateY(24px) scale(0.95)';
+        btn.innerHTML = '✦';
+        btn.style.fontSize = '1.6rem';
+        setTimeout(() => {
+          container.style.display = 'none';
+        }, 280);
+      }
+    });
+  })();
+</script>
