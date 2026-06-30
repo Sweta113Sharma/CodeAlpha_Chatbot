@@ -1,4 +1,4 @@
-# AlphaBot ✦ — CodeAlpha AI Chatbot Redesign
+# AlphaBot  — CodeAlpha AI Chatbot Redesign
 
 **AlphaBot** is a highly professional, human-friendly, retrieval-based chatbot designed to integrate seamlessly as a customer support assistant for **CodeAlpha** virtual internship programs. 
 
@@ -6,7 +6,7 @@ Featuring a modern, minimal wabi-sabi aesthetic (white, beige, black, and brown)
 
 ---
 
-##  Features
+## Features
 
 - **Minimal Beige Theme:** Designed with a warm, minimalist palette (white, beige, charcoal, and warm brown) utilizing premium modern typography (`Outfit` & `Plus Jakarta Sans`) and glassmorphic card overlays.
 - **Persistent SQLite Database:** Refactored backend ticket routing to persistently log student application submissions and inquiries inside `codealpha_chatbot.db`.
