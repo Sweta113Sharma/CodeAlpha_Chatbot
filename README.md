@@ -1,6 +1,6 @@
 # AlphaBot — CodeAlpha AI Chatbot Redesign
 
-**AlphaBot** is a professional, retrieval-based chatbot that serves as a customer support assistant for **CodeAlpha** virtual internship programs. It provides instant, empathetic responses to student inquiries about internship tracks, certification requirements, and technical topics—reducing support overhead while improving student experience.
+**AlphaBot** is a professional, retrieval-based chatbot that serves as a customer support assistant for **CodeAlpha** virtual internship programs. It provides instant, empathetic responses to student inquiries.
 
 Featuring a modern, minimal wabi-sabi aesthetic (white, beige, black, and brown), it combines seamless UI/UX with powerful backend persistence.
 
@@ -26,7 +26,7 @@ Featuring a modern, minimal wabi-sabi aesthetic (white, beige, black, and brown)
 
 ## Features
 
-- **Minimal Beige Theme:** Designed with a warm, minimalist palette (white, beige, charcoal, and warm brown) utilizing premium modern typography (`Outfit` & `Plus Jakarta Sans`) and glassmorphic card designs for visual elegance.
+- **Minimal Beige Theme:** Designed with a warm, minimalist palette (white, beige, charcoal, and warm brown) utilizing premium modern typography (`Outfit` & `Plus Jakarta Sans`) and glassmorphic card designs.
 - **Persistent SQLite Database:** Refactored backend ticket routing to persistently log student application submissions and inquiries inside `codealpha_chatbot.db`.
 - **Conversation Cache Persistence:** Serializes messaging history to the browser's `localStorage` so users never lose their conversation threads on page reload.
 - **Clean History Utilities:** Clear chat logs instantly and restore the default dashboard directly from the trash launcher in the header.
@@ -128,7 +128,7 @@ To embed **AlphaBot** as a floating chat bubble in the bottom-right corner of an
 3. The chatbot will appear as a floating widget
 
 **Live Sandbox Preview:**
-A live sandbox preview demonstrating the chatbot integrated on top of the official CodeAlpha website is available locally in [`codealpha_tech_demo.html`](./codealpha_tech_demo.html). Open this file in your browser to see a working demo.
+A live sandbox preview demonstrating the chatbot integrated on top of the official CodeAlpha website is available locally in [`codealpha_tech_demo.html`](./codealpha_tech_demo.html). Open this file in your browser to see it in action.
 
 ---
 
@@ -214,7 +214,7 @@ This project is licensed under the MIT License — see the [LICENSE](./LICENSE) 
 
 For questions, feedback, or collaboration opportunities:
 
-- **Email:** [sweta113sharma@example.com](mailto:sweta113sharma@example.com)
+- **Email:** [sweta.dollysharma@outlook.com](mailto:sweta.dollysharma@outlook.com)
 - **GitHub:** [@Sweta113Sharma](https://github.com/Sweta113Sharma)
 - **CodeAlpha:** [CodeAlpha Virtual Internship](https://codealpha.tech)
 
